@@ -1,0 +1,29 @@
+
+<div class="topnav">
+        <div class="nav">
+           <a href="signup"><p style="color:#f2f2f2" ><span class="glyphicon glyphicon-home"></span>  Add new blog</p></a> </div>
+           <input type="text" placeholder="Search.." id="input">
+           <div class="btn"><a href="signup" id="signup"><b><button type="button" class="btn btn-link" >Sign up</button> </b> </a>
+           <a href="signin"><button type="views/signup" class="btn btn-link">Sign in</button> </a> </div>
+             </div>
+    <script>
+    document.getElementById("input").addEventListener("change", myFunction);
+    function myFunction() {
+     var x = document.getElementById("input");
+       $.ajax({
+                type: 'POST',
+                url:'localhost:3000/found/' + x.value,
+                success: function() { alert('success');}
+           
+             });
+    
+    alert(x.value);
+    
+    }
+           </script>
+
+
+
+
+
+<script src ="../routes/blog.js"></script>
